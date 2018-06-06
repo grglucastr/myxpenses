@@ -1,0 +1,32 @@
+﻿<Page x:Class="MyXpenses.MyXpensesHome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:MyXpenses"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MyXpensesHome" Background="#ecf0f1">
+    <DockPanel>
+
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Left" Width="170" Background="CornflowerBlue">
+            <StackPanel Background="#7864ed" Height="90" Margin="0 0 0 10" >
+                <TextBlock Text="George Bentes" Foreground="#eee" FontSize="20" FontFamily="Calibri" TextAlignment="Center" Margin="0 15 0 0" />
+                <TextBlock Text="george.bentes@gmail.com" Foreground="#eee" FontSize="14" FontFamily="Calibri" TextAlignment="Center" />
+            </StackPanel>
+            <Button Content="Dashboard" BorderThickness="0" Cursor="Hand" Padding="20 10" x:Name="menuBtnDashboard" Click="menuBtnDashboard_Click" Margin="0 0 0 5" />
+            <Button Content="Despesas" Cursor="Hand" Padding="20 10" Margin="0 0 0 5" x:Name="menuBtnDespesas" Click="menuBtnDespesas_Click"/>
+            <Separator Background="White" />
+            <Button Content="Configurações" Cursor="Hand" Padding="20 10" Margin="0 5 0 0" />
+        </StackPanel>
+
+
+        <Border Margin="10">
+            <Frame x:Name="_appFrame" />
+        </Border>
+    </DockPanel>
+
+
+
+
+</Page>

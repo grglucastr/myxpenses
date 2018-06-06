@@ -1,0 +1,98 @@
+﻿<Page x:Class="MyXpenses.MyXpensesDashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:local="clr-namespace:MyXpenses"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MyXpensesDashboard">
+
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Período" Style="{StaticResource ControlTitles}" />
+                <Border Background="#3498db">
+                    <TextBlock Text="2018/06" Style="{StaticResource MainDataDashboard}" />
+                </Border>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="10 0 10 0">
+                <TextBlock Text="Pagar" Style="{StaticResource ControlTitles}" />
+                <Border Background="#f39c12">
+                    <TextBlock Text="R$ 880,00" Style="{StaticResource MainDataDashboard}"  />
+                </Border>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="Pago" Style="{StaticResource ControlTitles}" />
+                <Border Background="#2ecc71" >
+                    <TextBlock Text="R$ 1.128,33" Style="{StaticResource MainDataDashboard}" />
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <!-- Últimas transações  e chart -->
+        <Grid Margin="0 15 0 5">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <!-- Últimas Transações -->
+            <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                <TextBlock Text="Últimas Transações" Style="{StaticResource ControlTitles}"/>
+                <ListView x:Name="DespesasListView" Height="250" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Despesa" Width="175" DisplayMemberBinding="{Binding Descricao}" />
+                            <GridViewColumn Header="Valor" Width="100" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Valor}" TextAlignment="Right"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Data" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DataPago}" TextAlignment="Center"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+
+            <!-- Gráfico comparação mês anterior  -->
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="Comparação com Mês Anterior" Style="{StaticResource ControlTitles}"/>
+                <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" Height="300" >
+                    <lvc:CartesianChart.AxisY>
+                        <lvc:Axis Title="Sales" LabelFormatter="{Binding YFormatter}"></lvc:Axis>
+                    </lvc:CartesianChart.AxisY>
+                    <lvc:CartesianChart.AxisX>
+                        <lvc:Axis Title="Month" Labels="{Binding Labels}"></lvc:Axis>
+                    </lvc:CartesianChart.AxisX>
+                </lvc:CartesianChart>
+            </StackPanel>
+        </Grid>
+
+      
+    </StackPanel>
+</Page>

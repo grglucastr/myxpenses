@@ -1,0 +1,28 @@
+﻿<Application x:Class="MyXpenses.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MyXpenses"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="TextBlock" x:Key="ControlTitles">
+            <Setter Property="FontFamily" Value="Tahoma" />
+            <Setter Property="Margin" Value="0 0 5 5"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="BorderRectaglesDashboard">
+            <Setter Property="BorderBrush" Value="#ccc" />
+            <Setter Property="BorderThickness" Value="0.5"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="MainDataDashboard">
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontFamily" Value="Tahoma" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Foreground" Value="#fff" />
+            <Setter Property="Padding" Value="20" />
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10 0" />
+        </Style>
+         
+    </Application.Resources>
+</Application>
