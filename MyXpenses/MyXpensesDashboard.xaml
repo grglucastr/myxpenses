@@ -10,7 +10,8 @@
       Title="MyXpensesDashboard">
 
     <StackPanel>
-        <Grid>
+        <TextBlock Text="Dashboard" Grid.Column="0" FontFamily="Tahoma" FontSize="18" Margin="0 0 0 15" />
+        <Grid >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />

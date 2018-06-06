@@ -101,18 +101,5 @@ namespace MyXpenses
             DataContext = this;
         }
 
-        private class Despesa
-        {
-            public String Descricao { get; set; }
-            public String Valor { get; set; }
-            public String DataPago { get; set; }
-
-            public Despesa(String Descricao, String Valor, String DataPago)
-            {
-                this.DataPago = DataPago;
-                this.Descricao = Descricao;
-                this.Valor = Valor;
-            }
-        }
     }
 }

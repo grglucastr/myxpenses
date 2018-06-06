@@ -15,9 +15,9 @@
                 <TextBlock Text="george.bentes@gmail.com" Foreground="#eee" FontSize="14" FontFamily="Calibri" TextAlignment="Center" />
             </StackPanel>
             <Button Content="Dashboard" BorderThickness="0" Cursor="Hand" Padding="20 10" x:Name="menuBtnDashboard" Click="menuBtnDashboard_Click" Margin="0 0 0 5" />
-            <Button Content="Despesas" Cursor="Hand" Padding="20 10" Margin="0 0 0 5" x:Name="menuBtnDespesas" Click="menuBtnDespesas_Click"/>
+            <Button Content="Despesas"  BorderThickness="0" Cursor="Hand" Padding="20 10" x:Name="menuBtnDespesas" Click="menuBtnDespesas_Click" Margin="0 0 0 5"/>
             <Separator Background="White" />
-            <Button Content="Configurações" Cursor="Hand" Padding="20 10" Margin="0 5 0 0" />
+            <Button Content="Configurações" BorderThickness="0" Cursor="Hand" Padding="20 10" Margin="0 5 0 0" />
         </StackPanel>
 
 
