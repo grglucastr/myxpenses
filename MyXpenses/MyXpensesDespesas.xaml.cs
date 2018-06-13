@@ -38,5 +38,10 @@ namespace MyXpenses
 
             this.lstDespesas.ItemsSource = despesas;
         }
+
+        private void AddDespesa_Click(object sender, RoutedEventArgs e)
+        {
+            new DespesaWindow().Show();
+        }
     }
 }

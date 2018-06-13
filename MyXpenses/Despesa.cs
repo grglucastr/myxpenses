@@ -18,5 +18,19 @@ namespace MyXpenses
             this.Descricao = Descricao;
             this.Valor = Valor;
         }
+
+        public Despesa() { }
+
+        public Dictionary<int, int> DiasVencimento()
+        {
+            Dictionary<int, int> lstDiasVencimento = new Dictionary<int, int>();
+
+            for (int i = 1; i <= 31; i++)
+            {
+                lstDiasVencimento.Add(i, i);
+            }
+
+            return lstDiasVencimento;
+        }
     }
 }

@@ -16,7 +16,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="Despesas" Cursor="Hand" Grid.Column="0" FontFamily="Tahoma" FontSize="18" />
-            <Button Content="Nova Despesa" Grid.Column="1" Padding="7"  />
+            <Button Content="Nova Despesa" Grid.Column="1" Padding="7" x:Name="AddDespesa" Click="AddDespesa_Click" />
         </Grid>
                  
         <StackPanel>

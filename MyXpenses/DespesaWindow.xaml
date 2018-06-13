@@ -1,0 +1,82 @@
+﻿<Window x:Class="MyXpenses.DespesaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyXpenses"
+        mc:Ignorable="d"
+        Title="Nova Despesa"
+        Height="320"
+        Width="415"
+        Background="#ecf0f1"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize">
+
+    <Border Margin="10">
+        <StackPanel>
+            <TextBlock Text="Nova Despesa" FontFamily="Tahoma" FontSize="18" Margin="0 0 0 15" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="370" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel >
+                    <TextBlock Text="Nome Despesa: " />
+                    <TextBox Name="Nome" Padding="0 5"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="160" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Valor: " />
+                    <TextBox Padding="5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="10 0 0 0">
+                    <TextBlock Text="Dia Pagar: " />
+                    <ComboBox Padding="5">
+                        <ComboBoxItem>01</ComboBoxItem>
+                        <ComboBoxItem>05</ComboBoxItem>
+                        <ComboBoxItem>15</ComboBoxItem>
+                        <ComboBoxItem>20</ComboBoxItem>
+                        <ComboBoxItem>30</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="10 20 0 0">
+                    <CheckBox IsChecked="True" />
+                    <TextBlock Text="Despesa Básica?"  />
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="0 20 0 0">
+                    <CheckBox/>
+                    <TextBlock Text="Parcelado?" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="10 0 0 0">
+                    <TextBlock Text="Qtde Parcelas: " />
+                    <TextBox Padding="0 5"/>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel Margin="0 20 0 0">
+                <Button Content="Salvar" Padding="9" />
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>
